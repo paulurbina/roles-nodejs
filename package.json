@@ -1,0 +1,35 @@
+{
+  "name": "api-node-company",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "babel src --out-dir build",
+    "dev": "nodemon src --exec  babel-node",
+    "seed-server": "nodemon api-azure.js"
+  },
+  "keywords": [],
+  "author": "Paul Urbina Loayza",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.4",
+    "morgan": "^1.10.0",
+    "mssql": "^6.2.2",
+    "node-fetch": "^2.6.1",
+    "tedious": "^9.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "nodemon": "^2.0.4"
+  }
+}

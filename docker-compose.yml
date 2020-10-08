@@ -1,0 +1,28 @@
+version: "3"
+services: 
+  web:
+    build: .
+    container_name: crud-app
+    restart: always
+    ports: 
+      - "3000:3000"
+    depends_on:
+      - mongo
+    # env_file:
+    #   - web-variables.env
+    volumes: 
+      - .:/usr/src/app
+    networks:
+      - login-crud-app
+  mongo:
+    container_name: mydatabase
+    image: mongo
+    restart: unless-stopped
+    ports: 
+      - "27017:27017"
+    networks:
+      - login-crud-app
+
+networks: 
+  login-crud-app:
+    driver: bridge
